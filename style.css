@@ -13,15 +13,27 @@ body {
   z-index: 10;
 }
 
+/* Desktop & general style */
+input, button {
+  padding: 12px 16px;  /* slightly bigger than default */
+  font-size: 16px;      /* readable on desktop */
+  border-radius: 6px;
+  border: none;
+}
+
+/* Mobile adjustments */
 @media (max-width: 600px) {
   input {
     width: 60vw; /* input adapts to screen width */
+    font-size: 18px; /* bigger text on mobile */
   }
 
   button {
     width: 30vw; /* button adapts to screen width */
+    font-size: 18px;
   }
 }
+
 
 
 .container {
