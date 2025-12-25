@@ -13,12 +13,16 @@ body {
   z-index: 10;
 }
 
-input, button {
-  padding: 20px 26px;  /* bigger touch area */
-  font-size: 26px;      /* slightly larger text */
-  border-radius: 6px;   /* rounded corners */
-  border: none;
+@media (max-width: 600px) {
+  input {
+    width: 60vw; /* input adapts to screen width */
+  }
+
+  button {
+    width: 30vw; /* button adapts to screen width */
+  }
 }
+
 
 .container {
   display: flex;
@@ -78,12 +82,4 @@ input, button {
   pointer-events: none;
 }
 
-@media (max-width: 600px) {
-  input {
-    width: 60vw; /* input adapts to screen width */
-  }
 
-  button {
-    width: 30vw; /* button adapts to screen width */
-  }
-}
