@@ -1,77 +1,28 @@
-body {
-  margin: 0;
-  background: black;
-  overflow: hidden;
-  font-family: monospace;
-}
-
 .controls {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 input, button {
-  padding: 8px 12px;
-  font-size: 16px;
+  padding: 12px 16px; /* bigger touch area */
+  font-size: 18px;     /* larger text for mobile */
+  border-radius: 6px;
+  border: none;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+/* Make input/button responsive on small screens */
+@media (max-width: 500px) {
+  input {
+    width: 60vw; /* input is 60% of viewport width */
+  }
 
-.glitch {
-  font-size: 7vw;
-  letter-spacing: 0.3em;
-  color: white;
-  position: relative;
-  animation: colorPulse 2s infinite;
-}
-
-@keyframes colorPulse {
-  0% { color: red; }
-  50% { color: green; }
-  100% { color: red; }
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  width: 100%;
-  opacity: 0.8;
-}
-
-.glitch::before {
-  animation: glitchTop 1.2s infinite linear;
-}
-
-.glitch::after {
-  animation: glitchBottom 1.2s infinite linear;
-}
-
-@keyframes glitchTop {
-  0% { clip-path: inset(0 0 70% 0); transform: translate(-2px, -2px); }
-  50% { clip-path: inset(0 0 50% 0); transform: translate(2px, 2px); }
-  100% { clip-path: inset(0 0 70% 0); transform: translate(-2px, 0); }
-}
-
-@keyframes glitchBottom {
-  0% { clip-path: inset(70% 0 0 0); transform: translate(2px, 0); }
-  50% { clip-path: inset(50% 0 0 0); transform: translate(-2px, -2px); }
-  100% { clip-path: inset(70% 0 0 0); transform: translate(0, 2px); }
-}
-
-/* Snow canvas */
-#snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+  button {
+    width: 30vw; /* button is 30% of viewport width */
+  }
 }
