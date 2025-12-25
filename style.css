@@ -78,3 +78,12 @@ input, button {
   pointer-events: none;
 }
 
+@media (max-width: 600px) {
+  input {
+    width: 60vw; /* input adapts to screen width */
+  }
+
+  button {
+    width: 30vw; /* button adapts to screen width */
+  }
+}
