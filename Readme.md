@@ -27,3 +27,5 @@ This website lets you:
 👉 https://adithyaherath.github.io/christmas-glitch/
 
 Made with ❤️, JavaScript, and zero sleep.
+PS: If this made you smile, the project is already successful 😄
+
