@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Merry Christmas Glitch</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Controls -->
-<div class="controls">
-  <input type="text" id="nameInput" placeholder="Enter name">
-  <button onclick="generateText()">Generate 🎄</button>
-</div>
-
-<!-- Snow Canvas -->
-<canvas id="snow"></canvas>
-
-<!-- Text -->
-<div class="container">
-  <div id="glitchText" class="glitch" data-text="MERRY CHRISTMAS">
-    MERRY CHRISTMAS
+  <!-- Controls -->
+  <div class="controls">
+    <input type="text" id="nameInput" placeholder="Enter name" />
+    <button type="button" onclick="generateText()">Generate 🎄</button>
   </div>
-</div>
 
-<!-- Glitch Sound -->
-<audio id="christmasSong" loop>
-  <source src="brandalee.mp3" type="audio/mpeg">
-</audio>
+  <!-- Snow -->
+  <canvas id="snow"></canvas>
 
-<script src="script.js"></script>
+  <!-- Centered Text -->
+  <div class="container">
+    <div id="glitchText" class="glitch" data-text="MERRY CHRISTMAS">
+      MERRY CHRISTMAS
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="christmasSong" loop>
+    <source src="brandalee.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<!--test-->

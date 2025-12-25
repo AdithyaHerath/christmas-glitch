@@ -1,70 +1,70 @@
-body {
+html, body {
   margin: 0;
+  height: 100%;
   background: black;
   overflow: hidden;
   font-family: monospace;
 }
 
+/* Top controls */
 .controls {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  display: flex;
+  gap: 12px;
 }
 
-/* Desktop & general style */
-/* input, button {
-  padding: 12px 16px;  
-  font-size: 16px;      
-  border-radius: 6px;
-  border: none;
-} */
-
+/* Inputs */
 input, button {
-    padding: 30px 16px;
-    font-size: 25px;
-    border-radius: 6px;
-    border: none;
-    margin-top: 100px;
+  padding: 12px 16px;
+  font-size: 18px; /* >=16 prevents iOS zoom */
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
-/* Mobile adjustments */
 @media (max-width: 600px) {
-  input {
-    width: 60vw; /* input adapts to screen width */
-    font-size: 18px; /* bigger text on mobile */
-  }
-
-  button {
-    width: 30vw; /* button adapts to screen width */
-    font-size: 18px;
-  }
+  input { width: 60vw; }
+  button { width: 30vw; }
 }
 
-
-
+/* Centered container (keyboard-safe) */
 .container {
+  position: fixed;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  height: 100dvh;
 }
 
+/* Glitch text */
 .glitch {
-  font-size: 7vw;
-  letter-spacing: 0.3em;
+  font-size: clamp(28px, 7vw, 110px);
+  letter-spacing: clamp(0.06em, 0.18em, 0.28em);
   color: white;
   position: relative;
   animation: colorPulse 2s infinite;
+  text-align: center;
+
+  white-space: nowrap;
+  line-height: 1.05;
+  max-width: 96vw;
+  padding: 0 2vw;
 }
 
+/* Color animation */
 @keyframes colorPulse {
   0% { color: red; }
   50% { color: green; }
   100% { color: red; }
 }
 
+/* Glitch layers */
 .glitch::before,
 .glitch::after {
   content: attr(data-text);
@@ -97,9 +97,6 @@ input, button {
 /* Snow canvas */
 #snow {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   pointer-events: none;
 }
-
-
