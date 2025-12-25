@@ -14,11 +14,19 @@ body {
 }
 
 /* Desktop & general style */
-input, button {
-  padding: 12px 16px;  /* slightly bigger than default */
-  font-size: 16px;      /* readable on desktop */
+/* input, button {
+  padding: 12px 16px;  
+  font-size: 16px;      
   border-radius: 6px;
   border: none;
+} */
+
+input, button {
+    padding: 30px 16px;
+    font-size: 25px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 100px;
 }
 
 /* Mobile adjustments */
