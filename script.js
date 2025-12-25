@@ -2,6 +2,7 @@
 
 const chaosChars = "!@#$%^&*()_+=-<>?/|{}[]★☆goPOP";
 const sound = document.getElementById("glitchSound");
+const song = document.getElementById("christmasSong");
 
 function generateText() {
   const name = document.getElementById("nameInput").value || "FRIEND";
@@ -11,6 +12,11 @@ function generateText() {
   el.setAttribute("data-text", text);
   sound.currentTime = 0;
   sound.play();
+
+  // Play Christmas song
+  if (song.paused) {
+    song.play();
+  }
 
   let iterations = 0;
 
