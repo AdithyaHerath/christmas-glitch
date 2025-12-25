@@ -5,41 +5,19 @@ body {
   font-family: monospace;
 }
 
-/* Controls */
 .controls {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap; /* wrap on small screens */
-  justify-content: center;
 }
 
 input, button {
-  padding: 12px 18px; /* larger touch area for mobile */
-  font-size: 16px;     /* default font for desktop */
-  border-radius: 6px;
-  border: none;
-  outline: none;
+  padding: 8px 12px;
+  font-size: 16px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
-  input {
-    width: 60vw; /* input width adapts to screen */
-    font-size: 18px;
-  }
-
-  button {
-    width: 30vw; /* button width adapts to screen */
-    font-size: 18px;
-  }
-}
-
-/* Centered glitch text */
 .container {
   display: flex;
   justify-content: center;
@@ -48,7 +26,7 @@ input, button {
 }
 
 .glitch {
-  font-size: 7vw; /* scales with screen width */
+  font-size: 7vw;
   letter-spacing: 0.3em;
   color: white;
   position: relative;
@@ -97,3 +75,4 @@ input, button {
   left: 0;
   pointer-events: none;
 }
+
